@@ -1,0 +1,5 @@
+public/
+.idea*
+*.tfstate*
+*.terraform*
+*.DS_Store

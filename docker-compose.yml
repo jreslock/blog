@@ -1,0 +1,25 @@
+version: "3.2"
+
+services:
+  blog:
+    hostname: $USER
+    build:
+      context: .
+    image: blog
+    environment:
+      - PATHADD=/home/blog/.local/bin
+    ports:
+      - target: 1313
+        published: 1313
+        protocol: tcp
+        mode: host
+    networks:
+      - blog
+    working_dir: /blog
+    volumes:
+      - ~/.aws:/home/blog/.aws
+      - $PWD:/blog
+
+networks:
+  blog:
+    driver: bridge

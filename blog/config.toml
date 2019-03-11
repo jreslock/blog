@@ -1,0 +1,9 @@
+languageCode = "en-us"
+baseURL = "https://jreslock.wtf"
+title = "My Dumb Blog"
+theme = "rusty"
+
+[params]
+    twitter_username = "jreslock"
+    github_username = "jreslock"
+    description = "Things I learned from fighting with computers"
